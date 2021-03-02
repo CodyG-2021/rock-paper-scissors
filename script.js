@@ -9,6 +9,9 @@ function myGame() {
   var userChoice = prompt(
     "Let's Play a Game, pick R, P, or S. If you pick something else you will lose."
   );
+  if (!userChoice) {
+    return;
+  }
   var options = ["R", "S", "P"];
   var index = Math.floor(Math.random() * options.length);
   var compChoice = options[index];
